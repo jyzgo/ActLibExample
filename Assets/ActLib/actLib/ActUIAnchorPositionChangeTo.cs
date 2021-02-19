@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,10 +6,11 @@ namespace ActLib
 {
     public class ActUIAnchorPositionChangeTo : BaseAct
     {
-        public ActUIAnchorPositionChangeTo(float duration, Vector2 position)
+        public ActUIAnchorPositionChangeTo(float duration, RectTransform rectTrans, Vector2 position)
         {
             _duration = duration;
             _endPosition = position;
+            _trans = rectTrans; 
         }
 
         Vector2 _endPosition;
@@ -18,7 +19,6 @@ namespace ActLib
         public override void SetGameObject(GameObject tar)
         {
             base.SetGameObject(tar);
-            _trans = tar.GetComponent<RectTransform>();
         }
 
         public override IEnumerator IAct()
