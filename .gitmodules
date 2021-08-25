@@ -1,0 +1,3 @@
+[submodule "Assets/ActLib"]
+	path = Assets/ActLib
+	url = git@github.com:jyzgo/ActLib.git
